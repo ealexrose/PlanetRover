@@ -33,12 +33,12 @@ public class SpawnManager : MonoBehaviour
         enemyTimerIndex += Time.deltaTime;
         if (enemyTimerIndex >= enemyTimer)
         {
-            SpawnItem(enemy, 0.5f);
+            SpawnItem(enemy, 15f);
             enemyTimerIndex = 0;
         }
         if (batteryTimerIndex >= batteryTimer)
         {
-            SpawnItem(battery, 0.5f);
+            SpawnItem(battery, 15f);
             batteryTimerIndex = 0;   
         }
     }
