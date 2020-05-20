@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class BatteryManager : MonoBehaviour
 {
+    public GameObject pauseMenu;
     public RectTransform batteryBar;
     public RoverController roverController;
     public LayerMask objectMask;
@@ -39,6 +40,7 @@ public class BatteryManager : MonoBehaviour
 
     void BatteryDepleted()
     {
+        pauseMenu.SetActive(true);
         roverController.enabled = false;
         
         Transform roverTransform = roverController.transform;
@@ -46,7 +48,7 @@ public class BatteryManager : MonoBehaviour
         //roverTransform.GetComponent<Rigidbody>().useGravity = true;
         roverBody.constraints = RigidbodyConstraints.None;
         roverBody.AddForce(roverTransform.up);
-        roverBody.AddTorque(roverTransform.right + (roverTransform.forward*3));
+        roverBody.AddTorque((roverTransform.right*6) + (roverTransform.forward*18));
 
     }
 
