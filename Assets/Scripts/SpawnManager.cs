@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public bool debugSpheres;
+    public GameObject homePlanet;
     public GameObject enemy;
     public GameObject battery;
     public LayerMask objectMask;
@@ -59,7 +60,10 @@ public class SpawnManager : MonoBehaviour
             drawSpawnAttempt = true;
             if (!Physics.CheckSphere(spawnPosition, minimumObjectSpace, objectMask) && !Physics.CheckSphere(spawnPosition, minimumRoverSpace, roverMask))
             {
-                Instantiate(_objectToSpawn, spawnPosition, Quaternion.identity, null);
+               GameObject newObject = Instantiate(_objectToSpawn, spawnPosition, Quaternion.identity, null);
+                Vector3 downVector = (newObject.transform.position - homePlanet.transform.position).normalized;
+                Quaternion toRotation = Quaternion.FromToRotation(transform.up, downVector) * transform.rotation;
+                newObject.transform.rotation = toRotation;
                 objectSpawned = true;
             }
             repeatIndex++;
