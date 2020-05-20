@@ -1512,7 +1512,7 @@ MonoBehaviour:
   objectMask:
     serializedVersion: 2
     m_Bits: 256
-  maxBattery: 100
+  maxBattery: 200
   drainSpeed: 3
   currentBattery: 0
   batteryPickupValue: 10
