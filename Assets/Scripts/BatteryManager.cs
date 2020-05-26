@@ -15,9 +15,17 @@ public class BatteryManager : MonoBehaviour
     public float batteryPickupValue;
     public float enemyHitValue;
     public bool alive;
+    [Space]
+    [Header("Audio Properties")]
+    public string batteryPickupSfx;
+    public string hitSfx;
+
+    [HideInInspector]
+    public AudioManager audioManager;
     // Start is called before the first frame update
     void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         currentBattery = maxBattery;
         alive = true;
     }
@@ -40,7 +48,7 @@ public class BatteryManager : MonoBehaviour
 
     void BatteryDepleted()
     {
-        pauseMenu.SetActive(true);
+        pauseMenu.GetComponent<PauseMenu>().EndScreen();
         roverController.enabled = false;
         
         Transform roverTransform = roverController.transform;
@@ -63,9 +71,11 @@ public class BatteryManager : MonoBehaviour
                 case "battery":
                     Destroy(collidedObject);
                     currentBattery += batteryPickupValue;
+                    audioManager.Play(batteryPickupSfx);
                     break;
                 case "enemy":
                     currentBattery -= enemyHitValue;
+                    audioManager.Play(hitSfx);
                     break;
                 default:
                     Debug.Log(collidedObject.GetComponent<ObjectID>().id.ToString() + " has an unaccounted for case");

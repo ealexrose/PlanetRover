@@ -6,22 +6,33 @@ public class RoverController : MonoBehaviour
 {
     public Camera mainCamera;
     public GameObject homePlanet;
+    //Copy This part and start function to have audio manager access
+
+
     public float moveSpeed;
     public float turnSpeed;
     public float radius;
     public float offset;
     public float cameraRelativeDistance;
     public bool adjust;
+    [Space]
+    [Header("Audio Properties")]
+    public string driveSound;
+    public string mainTheme;
+    [HideInInspector]
+    public AudioManager audioManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioManager = FindObjectOfType<AudioManager>();
+        audioManager.Play(mainTheme);
     }
 
     // Update is called once per frame
     void Update()
     {
         //Get the amount fo distance to turn
+        audioManager.Play(driveSound);
 
         float radiusSquared = Mathf.Pow((radius+offset), 2);
         if (adjust)
