@@ -70,7 +70,7 @@ public class RoverController : MonoBehaviour
         }
         output.Remove(output.Length - 1);
         output += ")";
-        Debug.Log(output);
+        //Debug.Log(output);
 
         transform.position += transform.right * moveSpeed * Time.deltaTime;
 
