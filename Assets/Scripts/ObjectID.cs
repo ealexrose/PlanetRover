@@ -9,6 +9,7 @@ public class ObjectID : MonoBehaviour
     {
         none,
         battery,
+        collectable,
         enemy
     }
 

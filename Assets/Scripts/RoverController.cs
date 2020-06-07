@@ -10,6 +10,7 @@ public class RoverController : MonoBehaviour
     public GameObject signal;
     public GameObject transmissionStart;
     public GameObject transmissionEnd;
+    public MobileControls mobileControls;
     //Copy This part and start function to have audio manager access
 
 
@@ -52,6 +53,14 @@ public class RoverController : MonoBehaviour
         if (inputDelay == 0)
         {
             horizontal = Input.GetAxis("Horizontal") * turnSpeed;
+            if (mobileControls.RightSideTouch())
+            {
+                horizontal = 1 * turnSpeed; 
+            }
+            if (mobileControls.LeftSideTouch())
+            {
+                horizontal = -1 * turnSpeed;
+            }
         }
         else
         {
@@ -91,6 +100,15 @@ public class RoverController : MonoBehaviour
     public void AccumulatAction()
     {
         float input = Input.GetAxis("Horizontal");
+
+        if (mobileControls.RightSideTouch())
+        {
+            input = 1 * turnSpeed;
+        }
+        if (mobileControls.LeftSideTouch())
+        {
+            input = -1 * turnSpeed;
+        }
         //Debug.Log(input);
         if (input != 0)
         {
@@ -130,7 +148,7 @@ public class RoverController : MonoBehaviour
             Vector3 offset = transmissionEnd.GetComponent<RectTransform>().localPosition - transmissionStart.GetComponent<RectTransform>().localPosition;
             Vector3 rectMove = (Mathf.Clamp(inputDelay - t.timerDelay, 0, inputDelay) / inputDelay) * offset;
             t.partner.GetComponent<RectTransform>().localPosition = rectMove;
-            Debug.Log(rectMove);
+            //Debug.Log(rectMove);
             if (t.timerDelay > 0)
             {
                 t.timerDelay -= Time.deltaTime;

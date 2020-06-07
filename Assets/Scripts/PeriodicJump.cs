@@ -22,7 +22,7 @@ public class PeriodicJump : MonoBehaviour
         {
             animator.SetTrigger("JumpTrigger");
             timeCount = 0;
-            Debug.Log("Jump!");
+            //Debug.Log("Jump!");
         }
     }
     void OnCollisionEnter()

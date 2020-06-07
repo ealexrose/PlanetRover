@@ -7,7 +7,7 @@ public class BatteryManager : MonoBehaviour
 {
     public GameObject pauseMenu;
     public ScoreManager score;
-    public RectTransform batteryBar;
+    public Image batteryBar;
     public RoverController roverController;
     public LayerMask objectMask;
     public float maxBattery;
@@ -20,6 +20,7 @@ public class BatteryManager : MonoBehaviour
     [Header("Audio Properties")]
     public string batteryPickupSfx;
     public string hitSfx;
+    public string collectableSfx;
 
     [HideInInspector]
     public AudioManager audioManager;
@@ -34,7 +35,7 @@ public class BatteryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        batteryBar.localScale = new Vector3(currentBattery / maxBattery, 1, 1);
+        batteryBar.fillAmount = currentBattery / maxBattery;
         if (currentBattery > 0)
         {
             currentBattery -= drainSpeed * Time.deltaTime;
@@ -79,6 +80,11 @@ public class BatteryManager : MonoBehaviour
                 case "enemy":
                     currentBattery -= enemyHitValue;
                     audioManager.Play(hitSfx);
+                    break;
+                case "collectable":
+                    Destroy(collidedObject);
+                    score.score += 1;
+                    audioManager.Play(collectableSfx);
                     break;
                 default:
                     Debug.Log(collidedObject.GetComponent<ObjectID>().id.ToString() + " has an unaccounted for case");

@@ -9,12 +9,16 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject resume;
     public GameObject restart;
+    public GameObject continueButton;
+    public ScoreManager scoreManager;
     public bool alive;
     // Start is called before the first frame update
     void Start()
     {
         alive = true;
         Paused = false;
+        scoreManager = GameObject.Find("Score").GetComponent<ScoreManager>();
+        
     }
 
     // Update is called once per frame
@@ -36,9 +40,9 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void Quit()
+    public void MainMenu()
     {
-        Application.Quit();
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void PauseGame()
@@ -61,6 +65,21 @@ public class PauseMenu : MonoBehaviour
         restart.SetActive(true);
         PauseGame();
         Time.timeScale = 1f;
+    }
+
+    public void WinScreen()
+    {
+        alive = false;
+        resume.SetActive(false);
+        restart.SetActive(false);
+        continueButton.SetActive(true);
+        PauseGame();
+        Time.timeScale = .1f;
+    }
+
+    public void Continue()
+    {
+        SceneManager.LoadScene(scoreManager.nextLevel);
     }
 
 }
