@@ -6,6 +6,7 @@ public class SpawnManager : MonoBehaviour
 {
     public bool debugSpheres;
     public GameObject homePlanet;
+    public ScoreManager scoreManager;
     public GameObject enemy;
     public GameObject battery;
     public LayerMask objectMask;
@@ -21,10 +22,13 @@ public class SpawnManager : MonoBehaviour
     private bool drawSpawnAttempt;
     private Vector3 spawnAttemptPosition;
     private float spawnAttemptSize;
+
+    public float planetRadius;
     // Start is called before the first frame update
     void Start()
     {
-        
+        planetRadius = this.GetComponent<RoverController>().radius;
+
     }
 
     // Update is called once per frame
@@ -34,41 +38,42 @@ public class SpawnManager : MonoBehaviour
         enemyTimerIndex += Time.deltaTime;
         if (enemyTimerIndex >= enemyTimer)
         {
-            SpawnItem(enemy, 15f);
+            SpawnItem(enemy, planetRadius, minimumObjectSpace, minimumRoverSpace);
             enemyTimerIndex = 0;
         }
         if (batteryTimerIndex >= batteryTimer)
         {
-            SpawnItem(battery, 15f);
+            SpawnItem(battery, planetRadius, minimumObjectSpace, minimumRoverSpace);
             batteryTimerIndex = 0;   
         }
     }
 
-    public void SpawnItem(GameObject _objectToSpawn, float _planetRadius)
+    public bool SpawnItem(GameObject _objectToSpawn, float _planetRadius, float _objectSpace, float _roverSpace)
     {
 
         bool objectSpawned = false;
         
-        int repeatLimit = 30;
+        int repeatLimit = 50;
         int repeatIndex = 0;
         do
         {
             Vector3 spawnPosition = RandomPointOnSphere(_planetRadius);
 
             spawnAttemptPosition = spawnPosition;
-            spawnAttemptSize = minimumObjectSpace;
+            spawnAttemptSize = _roverSpace;
             drawSpawnAttempt = true;
-            if (!Physics.CheckSphere(spawnPosition, minimumObjectSpace, objectMask) && !Physics.CheckSphere(spawnPosition, minimumRoverSpace, roverMask))
+            if (!Physics.CheckSphere(spawnPosition, _objectSpace, objectMask) && !Physics.CheckSphere(spawnPosition, _roverSpace, roverMask))
             {
                GameObject newObject = Instantiate(_objectToSpawn, spawnPosition, Quaternion.identity, null);
                 Vector3 downVector = (newObject.transform.position - homePlanet.transform.position).normalized;
                 Quaternion toRotation = Quaternion.FromToRotation(transform.up, downVector) * transform.rotation;
                 newObject.transform.rotation = toRotation;
                 objectSpawned = true;
+                return true;
             }
             repeatIndex++;
         } while (!objectSpawned && !(repeatIndex > repeatLimit));
-
+        return false;
     }
 
     public Vector3 RandomPointOnSphere(float _radius)

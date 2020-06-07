@@ -6,6 +6,10 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     public PauseMenu pauseMenu;
+    public GameObject rover;
+    public GameObject collectable;
+    public float collectableStartDistance;
+    public float collectableMinimumDistanceApart;
     public float score;
     public int digits;
     public string display;
@@ -72,6 +76,14 @@ public class ScoreManager : MonoBehaviour
                 break;
             case MissionType.collect:
                 score = 0;
+                for (int i = 0; i < MissionTarget; i++)
+                {
+                    if (!rover.GetComponent<SpawnManager>().SpawnItem(collectable, rover.GetComponent<RoverController>().radius, collectableMinimumDistanceApart, collectableStartDistance))
+                    {
+                        i--;
+                        collectableMinimumDistanceApart *= .9f;
+                    }
+                }
                 break;
             case MissionType.attack:
                 score = 0;

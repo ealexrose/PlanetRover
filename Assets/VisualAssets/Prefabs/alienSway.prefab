@@ -718,7 +718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8945bb245829298439eb36469f22d9c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 2
+  id: 3
 --- !u!114 &5447468991293958431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -733,6 +733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 829774244731377420}
   jumpTime: 1.5
+  timeCount: 0
 --- !u!1 &9185356330364668682
 GameObject:
   m_ObjectHideFlags: 0
