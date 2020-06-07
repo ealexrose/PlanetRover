@@ -442,8 +442,8 @@ MonoBehaviour:
   displayText: {fileID: 284734704}
   active: 1
   endless: 0
-  missionType: 1
-  MissionTarget: 15
+  missionType: 0
+  MissionTarget: 120
   nextLevel: SampleScene
 --- !u!1 &319962161 stripped
 GameObject:

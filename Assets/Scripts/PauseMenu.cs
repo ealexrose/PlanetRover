@@ -15,6 +15,7 @@ public class PauseMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1f;
         alive = true;
         Paused = false;
         scoreManager = GameObject.Find("Score").GetComponent<ScoreManager>();
