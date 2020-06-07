@@ -444,7 +444,7 @@ MonoBehaviour:
   endless: 0
   missionType: 0
   MissionTarget: 120
-  nextLevel: SampleScene
+  nextLevel: Level3
 --- !u!1 &319962161 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: f46e25633591b9148b3d0c6033e06608,
