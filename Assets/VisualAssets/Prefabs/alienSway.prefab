@@ -742,14 +742,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8692543565817674776}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b7f5b43368fb5a4b876524131898517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   desiredStart: 1
   desiredSize: 20
-  desiredGrowth: 0.2
+  desiredGrowth: 20
 --- !u!1 &9185356330364668682
 GameObject:
   m_ObjectHideFlags: 0

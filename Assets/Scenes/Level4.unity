@@ -434,8 +434,8 @@ MonoBehaviour:
   rover: {fileID: 8296172668857021616}
   collectable: {fileID: 2095165721133279655, guid: 16aa5678da7f4a547bada6209c888d55,
     type: 3}
-  collectableStartDistance: 7
-  collectableMinimumDistanceApart: 10
+  collectableStartDistance: 15
+  collectableMinimumDistanceApart: 15
   score: 0
   digits: 6
   display: 
@@ -443,8 +443,8 @@ MonoBehaviour:
   active: 1
   endless: 0
   missionType: 1
-  MissionTarget: 15
-  nextLevel: SampleScene
+  MissionTarget: 7
+  nextLevel: Level5
 --- !u!1 &319962161 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: f46e25633591b9148b3d0c6033e06608,
@@ -1366,7 +1366,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
@@ -2875,7 +2875,7 @@ MonoBehaviour:
   objectMask:
     serializedVersion: 2
     m_Bits: 256
-  maxBattery: 90
+  maxBattery: 100
   drainSpeed: 0
   currentBattery: 0
   batteryPickupValue: 10
@@ -2909,7 +2909,7 @@ MonoBehaviour:
   offset: 0.7
   cameraRelativeDistance: 40
   adjust: 1
-  inputDelay: 0.5
+  inputDelay: 1
   inputStream: 0
   driveSound: drive
   mainTheme: moon

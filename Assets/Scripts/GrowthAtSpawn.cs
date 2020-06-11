@@ -24,7 +24,7 @@ public class GrowthAtSpawn : MonoBehaviour
         if(transform.localScale.x <= desiredSize)
         {
             //Slowly turns the object bigger until it reaches its desired size
-            transform.localScale += new Vector3(desiredGrowth, desiredGrowth, desiredGrowth);
+            transform.localScale += new Vector3(desiredGrowth, desiredGrowth, desiredGrowth) * Time.deltaTime;
         }
     }
 }

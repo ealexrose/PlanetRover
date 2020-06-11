@@ -5,7 +5,9 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public bool debugSpheres;
+    [HideInInspector]
     public GameObject homePlanet;
+    [HideInInspector]
     public ScoreManager scoreManager;
     public GameObject enemy;
     public GameObject battery;
@@ -27,6 +29,7 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        homePlanet = GameObject.Find("planet");
         planetRadius = this.GetComponent<RoverController>().radius;
 
     }
@@ -60,7 +63,7 @@ public class SpawnManager : MonoBehaviour
             Vector3 spawnPosition = RandomPointOnSphere(_planetRadius);
 
             spawnAttemptPosition = spawnPosition;
-            spawnAttemptSize = _roverSpace;
+            spawnAttemptSize = _objectSpace;
             drawSpawnAttempt = true;
             if (!Physics.CheckSphere(spawnPosition, _objectSpace, objectMask) && !Physics.CheckSphere(spawnPosition, _roverSpace, roverMask))
             {

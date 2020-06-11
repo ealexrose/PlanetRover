@@ -44,8 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b7f5b43368fb5a4b876524131898517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  desiredStart: 0
   desiredSize: 0.8
-  desiredGrowth: 0.05
+  desiredGrowth: 0.8
 --- !u!1 &8962154148543373213
 GameObject:
   m_ObjectHideFlags: 0

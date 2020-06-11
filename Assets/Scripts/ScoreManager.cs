@@ -5,14 +5,18 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
+    [HideInInspector]
     public PauseMenu pauseMenu;
     public GameObject rover;
     public GameObject collectable;
     public float collectableStartDistance;
     public float collectableMinimumDistanceApart;
+    [HideInInspector]
     public float score;
     public int digits;
+    [HideInInspector]
     public string display;
+    [HideInInspector]
     public Text displayText;
     public bool active = true;
     public bool endless;
@@ -41,7 +45,7 @@ public class ScoreManager : MonoBehaviour
         {
             CalculateScore();
             score = Mathf.Max(score, 0);
-            displayText.text = GetScoreText();
+            this.gameObject.GetComponent<Text>().text = GetScoreText();
             if (!endless)
             {
                 if (MissionComplete())
