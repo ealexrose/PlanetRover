@@ -5,11 +5,14 @@ using UnityEngine.UI;
 
 public class RoverController : MonoBehaviour
 {
+    [HideInInspector]
     public Camera mainCamera;
+    [HideInInspector]
     public GameObject homePlanet;
     public GameObject signal;
     public GameObject transmissionStart;
     public GameObject transmissionEnd;
+    [HideInInspector]
     public MobileControls mobileControls;
     //Copy This part and start function to have audio manager access
 
@@ -21,6 +24,7 @@ public class RoverController : MonoBehaviour
     public float cameraRelativeDistance;
     public bool adjust;
     public float inputDelay;
+    [HideInInspector]
     public bool inputStream;
     public List<Timer> actionQueue = new List<Timer>();
     [Space]
@@ -32,8 +36,11 @@ public class RoverController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
+        homePlanet = GameObject.Find("planet");
         audioManager = FindObjectOfType<AudioManager>();
         audioManager.Play(mainTheme);
+        mobileControls = this.GetComponent<MobileControls>();
     }
 
     // Update is called once per frame

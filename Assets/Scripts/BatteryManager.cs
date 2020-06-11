@@ -12,9 +12,11 @@ public class BatteryManager : MonoBehaviour
     public LayerMask objectMask;
     public float maxBattery;
     public float drainSpeed;
+    [HideInInspector]
     public float currentBattery;
     public float batteryPickupValue;
     public float enemyHitValue;
+    [HideInInspector]
     public bool alive;
     [Space]
     [Header("Audio Properties")]

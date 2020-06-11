@@ -648,6 +648,7 @@ GameObject:
   - component: {fileID: 8656235851718132605}
   - component: {fileID: 1094082729784056962}
   - component: {fileID: 5447468991293958431}
+  - component: {fileID: 6067588119881369968}
   m_Layer: 8
   m_Name: alienSway
   m_TagString: Untagged
@@ -734,6 +735,21 @@ MonoBehaviour:
   animator: {fileID: 829774244731377420}
   jumpTime: 1.5
   timeCount: 0
+--- !u!114 &6067588119881369968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8692543565817674776}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7f5b43368fb5a4b876524131898517, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desiredStart: 1
+  desiredSize: 20
+  desiredGrowth: 20
 --- !u!1 &9185356330364668682
 GameObject:
   m_ObjectHideFlags: 0
