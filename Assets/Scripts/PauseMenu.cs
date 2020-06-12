@@ -12,9 +12,17 @@ public class PauseMenu : MonoBehaviour
     public GameObject continueButton;
     public ScoreManager scoreManager;
     public bool alive;
+    //Just testing for now
+    [HideInInspector]
+    public SaveSystem saveSystem;
+    public int LevelsPassed;
     // Start is called before the first frame update
     void Start()
     {
+        //Gotta have the SaveSystem script together with PauseMenu!
+        saveSystem = GetComponent<SaveSystem>();
+        //Loads the amount of levels passed
+        LevelsPassed = saveSystem.LoadGame();
         Time.timeScale = 1f;
         alive = true;
         Paused = false;
@@ -80,6 +88,12 @@ public class PauseMenu : MonoBehaviour
 
     public void Continue()
     {
+        if(LevelsPassed < 6)
+        {
+            //Adds a level to the amount beaten
+            LevelsPassed += 1;
+            saveSystem.SaveGame(LevelsPassed);
+        }
         SceneManager.LoadScene(scoreManager.nextLevel);
     }
 

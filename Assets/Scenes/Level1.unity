@@ -202,7 +202,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: acb55d2950a41ce4c9bf09b151bf91b8, type: 2}
+      objectReference: {fileID: 2100000, guid: af472b74ed50d154e9362da6767f74a6, type: 2}
     - target: {fileID: -927199367670048503, guid: f46e25633591b9148b3d0c6033e06608,
         type: 3}
       propertyPath: m_Name
@@ -1805,6 +1805,7 @@ GameObject:
   - component: {fileID: 1248657895}
   - component: {fileID: 1248657894}
   - component: {fileID: 1248657898}
+  - component: {fileID: 1248657899}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1913,6 +1914,21 @@ MonoBehaviour:
   continueButton: {fileID: 540173688}
   scoreManager: {fileID: 0}
   alive: 0
+  saveSystem: {fileID: 0}
+  LevelsPassed: 0
+--- !u!114 &1248657899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248657893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 326c89d262afd2b4085398e596d69f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelsPassed: 0
 --- !u!1 &1431944719
 GameObject:
   m_ObjectHideFlags: 0
