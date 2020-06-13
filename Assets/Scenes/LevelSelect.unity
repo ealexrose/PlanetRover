@@ -2772,19 +2772,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6bb257aca29928f49840da99f1f2de66, type: 3}
-    m_FontSize: 120
+    m_Font: {fileID: 12800000, guid: f48924a1448f36b4ab7aebfd7f150f73, type: 3}
+    m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 1
-    m_MaxSize: 240
+    m_MaxSize: 300
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: LEVEL SELECT
+  m_Text: '<color=white>LEVEL</color>
+
+    SELECT'
 --- !u!222 &2044150862
 CanvasRenderer:
   m_ObjectHideFlags: 0
