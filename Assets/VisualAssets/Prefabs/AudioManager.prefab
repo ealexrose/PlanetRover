@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7664806717816582740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7664806717816582738}
+  - component: {fileID: 7664806717816582741}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7664806717816582738
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7664806717816582740}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.0716453, y: 20.794413, z: -55.646904}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7664806717816582741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7664806717816582740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3f3996786c85e488271f482f55e840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: drive
+    loop: 0
+    interrupt: 0
+    clip: {fileID: 8300000, guid: e5443ea05f802ae4389e824197249b0a, type: 3}
+    volume: 0.233
+    pitch: 2.6
+    pitchVariance: 0.3
+    pitchStep: 3
+    pitchRandomizerChance: 0
+    source: {fileID: 0}
+  - name: moon
+    loop: 1
+    interrupt: 0
+    clip: {fileID: 8300000, guid: 565c9d6cfe5dd19469ed01095c76aa47, type: 3}
+    volume: 0.444
+    pitch: 1
+    pitchVariance: 0
+    pitchStep: 0
+    pitchRandomizerChance: 0
+    source: {fileID: 0}
+  - name: collect
+    loop: 0
+    interrupt: 0
+    clip: {fileID: 8300000, guid: 1353fb47ed487f74697242b12f831815, type: 3}
+    volume: 1
+    pitch: 2
+    pitchVariance: 0
+    pitchStep: 0
+    pitchRandomizerChance: 0
+    source: {fileID: 0}
+  - name: pickup
+    loop: 0
+    interrupt: 0
+    clip: {fileID: 8300000, guid: 5b6ac955f26f2d94ba4706bbc1a6241b, type: 3}
+    volume: 1
+    pitch: 2
+    pitchVariance: 0
+    pitchStep: 0
+    pitchRandomizerChance: 0
+    source: {fileID: 0}
+  - name: hit
+    loop: 0
+    interrupt: 0
+    clip: {fileID: 8300000, guid: 7364b823dbe86bf4abfc2417b8863bf5, type: 3}
+    volume: 1
+    pitch: 1.3
+    pitchVariance: 0
+    pitchStep: 0
+    pitchRandomizerChance: 0
+    source: {fileID: 0}

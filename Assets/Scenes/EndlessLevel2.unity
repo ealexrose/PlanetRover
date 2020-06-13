@@ -3057,8 +3057,8 @@ MonoBehaviour:
   enemyHitValue: 30
   alive: 0
   batteryPickupSfx: pickup
-  hitSfx: pickup
-  collectableSfx: 
+  hitSfx: hit
+  collectableSfx: collect
   audioManager: {fileID: 0}
 --- !u!114 &8296172668857021620
 MonoBehaviour:
