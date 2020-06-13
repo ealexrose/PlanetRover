@@ -3118,7 +3118,7 @@ MonoBehaviour:
   debugSpheres: 1
   homePlanet: {fileID: 319962161}
   scoreManager: {fileID: 0}
-  enemy: {fileID: 1036121244670606595, guid: c1dda72bfc377dd4297c137922192a65, type: 3}
+  enemy: {fileID: 8692543565817674776, guid: 607d85fc612679c40bef8f9b758b841c, type: 3}
   battery: {fileID: 8962154147496666048, guid: 25ba04240a886b34897b5f2f42e0478b, type: 3}
   objectMask:
     serializedVersion: 2

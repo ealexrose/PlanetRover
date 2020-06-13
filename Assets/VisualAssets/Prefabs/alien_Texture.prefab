@@ -144,8 +144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49b03efd75f287940ba0b1dc4f3fed6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 3942039246562280547}
-  jumpTime: 1.5
+  animator: {fileID: 0}
+  jumpTime: 0
   timeCount: 0
 --- !u!1 &5265604931019662424
 GameObject:
