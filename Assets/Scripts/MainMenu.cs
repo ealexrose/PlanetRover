@@ -19,15 +19,15 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("LevelSelect");
     }
     public void Options()
     {
         Debug.Log("Load The Options Menu");
     }
-    public void Quit()
+    public void Credits()
     {
-        Application.Quit();
+        Debug.Log("go to credits screen");
     }
 
 }
