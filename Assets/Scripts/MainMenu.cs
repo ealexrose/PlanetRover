@@ -29,6 +29,7 @@ public class MainMenu : MonoBehaviour
     }
     public void Credits()
     {
+        sceneTransitioner.GetComponent<SceneTransitions>().Blackout("Credits");
         Debug.Log("go to credits screen");
     }
 

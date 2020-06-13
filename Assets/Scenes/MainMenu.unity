@@ -391,6 +391,7 @@ MonoBehaviour:
   saveSystem: {fileID: 0}
   LevelsPassed: 0
   PauseButton: {fileID: 0}
+  sceneTransitioner: {fileID: 0}
 --- !u!1 &299221780
 GameObject:
   m_ObjectHideFlags: 0
