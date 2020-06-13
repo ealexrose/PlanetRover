@@ -186,23 +186,23 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f46e25633591b9148b3d0c6033e06608,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f46e25633591b9148b3d0c6033e06608,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f46e25633591b9148b3d0c6033e06608,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: f46e25633591b9148b3d0c6033e06608,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: acb55d2950a41ce4c9bf09b151bf91b8, type: 2}
+      objectReference: {fileID: 2100000, guid: a5fd6e99e99200344a5a3ced8076c70b, type: 2}
     - target: {fileID: -927199367670048503, guid: f46e25633591b9148b3d0c6033e06608,
         type: 3}
       propertyPath: m_Name
@@ -442,12 +442,12 @@ MonoBehaviour:
   display: 
   displayText: {fileID: 284734704}
   active: 1
-  endless: 0
-  missionType: 0
-  MissionTarget: 150
-  missionNum: 5
-  nextLevel: Level6
-  difficultyScaleFactor: 0
+  endless: 1
+  missionType: 1
+  MissionTarget: 19
+  missionNum: 6
+  nextLevel: MainMenu
+  difficultyScaleFactor: 0.1
   sceneTransitioner: {fileID: 0}
   saveSystem: {fileID: 0}
 --- !u!114 &284734707
@@ -2399,7 +2399,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6de17c0c9899b65469e538d04528cc8a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 26d22e833587a9847a2c8ea86bf2621a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3087,11 +3087,11 @@ MonoBehaviour:
   mobileControls: {fileID: 8296172668857021622}
   moveSpeed: 7.5
   turnSpeed: 100
-  radius: 15
+  radius: 20
   offset: 0.7
   cameraRelativeDistance: 40
   adjust: 1
-  inputDelay: 0.5
+  inputDelay: 1
   inputStream: 0
   driveSound: drive
   mainTheme: moon
@@ -3121,7 +3121,7 @@ MonoBehaviour:
     m_Bits: 512
   minimumObjectSpace: 3.3
   minimumRoverSpace: 10
-  enemyTimer: 1.5
+  enemyTimer: 999
   batteryTimer: 999
   planetRadius: 0
 --- !u!114 &8296172668857021622

@@ -442,7 +442,7 @@ MonoBehaviour:
   display: 
   displayText: {fileID: 284734704}
   active: 1
-  endless: 0
+  endless: 1
   missionType: 0
   MissionTarget: 150
   missionNum: 5
