@@ -11,7 +11,7 @@ public class SceneTransitions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame
@@ -26,8 +26,9 @@ public class SceneTransitions : MonoBehaviour
     }
     IEnumerator BlackoutRoutine(string _targetLevel)
     {
+        Time.timeScale = 1f;
         //Play Animation
-        //blackoutTransition.SetTrigger("StartFade");
+        blackoutTransition.SetTrigger("StartFade");
         //Wait
         yield return new WaitForSeconds(1f);
         //Load Scene

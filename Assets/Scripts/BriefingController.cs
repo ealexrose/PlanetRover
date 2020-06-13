@@ -15,15 +15,17 @@ public class BriefingController : MonoBehaviour
     [HideInInspector]
     public SaveSystem saveSystem;
     public int LevelsPassed;
+    public GameObject sceneTransitioner;
     // Start is called before the first frame update
     void Start()
     {
-
+        sceneTransitioner = GameObject.Find("SceneTransitionHolder");
 
         //Gotta have the SaveSystem script together with PauseMenu!
         saveSystem = GetComponent<SaveSystem>();
         //Loads the amount of levels passed
         LevelsPassed = saveSystem.LoadGame();
+        saveSystem.SetEndlessDifficulty(0);
         Debug.Log(LevelsPassed);
 
         endless.isOn = false;
@@ -71,11 +73,11 @@ public class BriefingController : MonoBehaviour
     {
         if (endless.isOn)
         {
-            SceneManager.LoadScene(cachedMission.endlessMission);
+            sceneTransitioner.GetComponent<SceneTransitions>().Blackout(cachedMission.endlessMission);
         }
         else
         {
-            SceneManager.LoadScene(cachedMission.mission);
+            sceneTransitioner.GetComponent<SceneTransitions>().Blackout(cachedMission.mission);
         }
         
 

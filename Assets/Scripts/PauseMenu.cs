@@ -18,9 +18,12 @@ public class PauseMenu : MonoBehaviour
     public SaveSystem saveSystem;
     public int LevelsPassed;
     public Button PauseButton;
+    public GameObject sceneTransitioner;
     // Start is called before the first frame update
     void Start()
     {
+
+        sceneTransitioner = GameObject.Find("SceneTransitionHolder");
         PauseButton = GameObject.Find("PauseButton").GetComponent<Button>();
         //Should Pause the Game when clicked on
         PauseButton.onClick.AddListener(PauseGame);
@@ -51,12 +54,12 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        sceneTransitioner.GetComponent<SceneTransitions>().Blackout(SceneManager.GetActiveScene().name);
     }
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        sceneTransitioner.GetComponent<SceneTransitions>().Blackout("MainMenu");
     }
 
     public void PauseGame()
@@ -97,7 +100,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Continue()
     {
-        SceneManager.LoadScene(scoreManager.nextLevel);
+        sceneTransitioner.GetComponent<SceneTransitions>().Blackout(scoreManager.nextLevel);
     }
 
 }
