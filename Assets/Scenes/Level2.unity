@@ -202,7 +202,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 01b9201ffedf6a1429a8f7bb4c913d83, type: 2}
+      objectReference: {fileID: 2100000, guid: af472b74ed50d154e9362da6767f74a6, type: 2}
     - target: {fileID: -927199367670048503, guid: f46e25633591b9148b3d0c6033e06608,
         type: 3}
       propertyPath: m_Name
@@ -1917,6 +1917,7 @@ MonoBehaviour:
   alive: 0
   saveSystem: {fileID: 0}
   LevelsPassed: 0
+  PauseButton: {fileID: 0}
 --- !u!114 &1248657899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2378,7 +2379,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a8c4af76894c75a4495331aa551d05f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f06171e2f4188e3418cab252525be649, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
