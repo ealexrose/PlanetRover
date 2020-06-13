@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -16,9 +17,13 @@ public class PauseMenu : MonoBehaviour
     [HideInInspector]
     public SaveSystem saveSystem;
     public int LevelsPassed;
+    public Button PauseButton;
     // Start is called before the first frame update
     void Start()
     {
+        PauseButton = GameObject.Find("PauseButton").GetComponent<Button>();
+        //Should Pause the Game when clicked on
+        PauseButton.onClick.AddListener(PauseGame);
         //Gotta have the SaveSystem script together with PauseMenu!
         saveSystem = GetComponent<SaveSystem>();
         //Loads the amount of levels passed
