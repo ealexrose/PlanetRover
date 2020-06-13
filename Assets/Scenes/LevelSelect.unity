@@ -1852,6 +1852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40fb2abdafcee2c418df5358efe30062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneTransitioner: {fileID: 0}
 --- !u!1 &1276881008
 GameObject:
   m_ObjectHideFlags: 0
@@ -1942,6 +1943,7 @@ GameObject:
   - component: {fileID: 1282355264}
   - component: {fileID: 1282355263}
   - component: {fileID: 1282355265}
+  - component: {fileID: 1282355266}
   m_Layer: 0
   m_Name: Select
   m_TagString: Untagged
@@ -2032,6 +2034,21 @@ MonoBehaviour:
   briefingDisplay: {fileID: 1276881010}
   endless: {fileID: 1904959606}
   endlessDisable: {fileID: 1929176857}
+  saveSystem: {fileID: 0}
+  LevelsPassed: 0
+--- !u!114 &1282355266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282355261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 326c89d262afd2b4085398e596d69f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelsPassed: 0
 --- !u!1 &1417652437
 GameObject:
   m_ObjectHideFlags: 0

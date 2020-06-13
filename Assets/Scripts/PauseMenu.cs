@@ -76,7 +76,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    public void WinScreen()
+    public void WinScreen(int _missionNum)
     {
         alive = false;
         resume.SetActive(false);
@@ -84,16 +84,14 @@ public class PauseMenu : MonoBehaviour
         continueButton.SetActive(true);
         PauseGame();
         Time.timeScale = .1f;
+
+        //Save Progress
+        LevelsPassed = _missionNum;
+        saveSystem.SaveGame(LevelsPassed);
     }
 
     public void Continue()
     {
-        if(LevelsPassed < 6)
-        {
-            //Adds a level to the amount beaten
-            LevelsPassed += 1;
-            saveSystem.SaveGame(LevelsPassed);
-        }
         SceneManager.LoadScene(scoreManager.nextLevel);
     }
 

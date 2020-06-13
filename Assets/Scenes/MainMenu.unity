@@ -770,7 +770,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9e2aa481b816fb4abd01f95be1de42a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blackout: {fileID: 0}
+  blackout: {fileID: 1656363973}
+  blackoutTransition: {fileID: 1656363975}
 --- !u!1 &678166863
 GameObject:
   m_ObjectHideFlags: 0
@@ -1761,6 +1762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40fb2abdafcee2c418df5358efe30062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneTransitioner: {fileID: 0}
 --- !u!1 &1583557384
 GameObject:
   m_ObjectHideFlags: 0
@@ -1906,7 +1908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 0
   m_Maskable: 0
   m_OnCullStateChanged:

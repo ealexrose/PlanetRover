@@ -11,9 +11,21 @@ public class BriefingController : MonoBehaviour
     public Text briefingDisplay;
     public Toggle endless;
     public GameObject endlessDisable;
+
+    [HideInInspector]
+    public SaveSystem saveSystem;
+    public int LevelsPassed;
     // Start is called before the first frame update
     void Start()
     {
+
+
+        //Gotta have the SaveSystem script together with PauseMenu!
+        saveSystem = GetComponent<SaveSystem>();
+        //Loads the amount of levels passed
+        LevelsPassed = saveSystem.LoadGame();
+        Debug.Log(LevelsPassed);
+
         endless.isOn = false;
         endlessDisable.SetActive(false);
         foreach (Transform child in transform)
@@ -22,6 +34,10 @@ public class BriefingController : MonoBehaviour
             if (child.GetComponent<LevelSelector>())
             {
                 child.GetComponent<LevelSelector>().missionGuide.missionID = missionList.Count;
+                if (child.GetComponent<LevelSelector>().missionGuide.missionID > LevelsPassed)
+                {
+                child.GetComponent<LevelSelector>().missionGuide.isBeaten =  false;
+                }
             }
         }
     }

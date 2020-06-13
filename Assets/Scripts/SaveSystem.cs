@@ -18,4 +18,12 @@ public class SaveSystem : MonoBehaviour
         LevelsPassed = PlayerPrefs.GetInt("LevelsPassed");
         return LevelsPassed;
     }
+    void Update()
+    {
+        if (Input.GetButtonDown("Cancel"))
+        {
+            SaveGame(0);
+            Debug.Log("progress reset");
+        }
+    }
 }

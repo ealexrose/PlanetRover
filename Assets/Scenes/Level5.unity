@@ -444,6 +444,7 @@ MonoBehaviour:
   endless: 0
   missionType: 0
   MissionTarget: 120
+  missionNum: 5
   nextLevel: Level2
 --- !u!1 &319962161 stripped
 GameObject:

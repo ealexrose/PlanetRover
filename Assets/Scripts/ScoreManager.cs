@@ -29,6 +29,7 @@ public class ScoreManager : MonoBehaviour
     }
     public MissionType missionType;
     public float MissionTarget;
+    public int missionNum;
 
     public string nextLevel;
     // Start is called before the first frame update
@@ -51,7 +52,7 @@ public class ScoreManager : MonoBehaviour
                 if (MissionComplete())
                 {
                     active = false;
-                    pauseMenu.WinScreen();
+                    pauseMenu.WinScreen(missionNum);
                     Debug.Log("You did it!");
                 }
             }
