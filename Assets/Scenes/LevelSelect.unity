@@ -764,7 +764,11 @@ MonoBehaviour:
     endlessMission: EndlessLevel2
     missionID: 1
     isBeaten: 1
-    missionBriefing: something wicked this way comes
+    missionBriefing: 'Destination: Earth
+
+
+      Another short training mission to
+      get used to the input delays that will occur when visiting other planets. '
   briefingController: {fileID: 0}
   button: {fileID: 0}
 --- !u!114 &489931392
@@ -1003,7 +1007,12 @@ MonoBehaviour:
     endlessMission: EndlessLevel3
     missionID: 2
     isBeaten: 0
-    missionBriefing: not ready for this!
+    missionBriefing: 'Destination: Mars
+
+
+      Explore the planet of Mars, but watch
+      out for the aliens! They''ll drain the rover''s battery if it come in contact
+      with them.'
   briefingController: {fileID: 0}
   button: {fileID: 0}
 --- !u!114 &763753659
@@ -1218,7 +1227,12 @@ MonoBehaviour:
     endlessMission: EndlessLevel4
     missionID: 3
     isBeaten: 0
-    missionBriefing: 
+    missionBriefing: 'Destination: Alien Home World
+
+
+      Collect the artifacts
+      that populate the planet, but make sure to steer clear of the aliens as they
+      don''t take kindly to strangers. '
   briefingController: {fileID: 0}
   button: {fileID: 0}
 --- !u!114 &852686343
@@ -1731,12 +1745,12 @@ MonoBehaviour:
     endlessMission: EndlessLevel1
     missionID: 0
     isBeaten: 1
-    missionBriefing: 'Destination:Earth
+    missionBriefing: 'Destination: Earth
 
 
-      A short training mission to get used
-      to the rover controls. Tap the left side of the screen to turn to the rovers
-      left, and the right side of the screen to turn right.'
+      A short training mission to get
+      used to the rover controls. Tap the left side of the screen to turn to the
+      rovers left, and the right side of the screen to turn right.'
   briefingController: {fileID: 0}
   button: {fileID: 0}
 --- !u!224 &1226636462 stripped
