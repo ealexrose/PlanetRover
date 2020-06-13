@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -30,11 +31,18 @@ public class ScoreManager : MonoBehaviour
     public MissionType missionType;
     public float MissionTarget;
     public int missionNum;
-
     public string nextLevel;
+
+    public float difficultyScaleFactor;
+    public GameObject sceneTransitioner;
+    public SaveSystem saveSystem;
+    bool difficultyChanged;
     // Start is called before the first frame update
     void Start()
     {
+        difficultyChanged = false;
+        sceneTransitioner = GameObject.Find("SceneTransitionHolder");
+        saveSystem = GetComponent<SaveSystem>();
         ScoreSet(MissionTarget);
         pauseMenu = GameObject.Find("Canvas").GetComponent<PauseMenu>();
     }
@@ -52,9 +60,19 @@ public class ScoreManager : MonoBehaviour
                 if (MissionComplete())
                 {
                     active = false;
+
                     pauseMenu.WinScreen(missionNum);
                     Debug.Log("You did it!");
                 }
+            }
+            if (endless && (missionType == MissionType.collect) && MissionComplete())
+            {
+                if (!difficultyChanged)
+                {
+                    saveSystem.SetEndlessDifficulty(saveSystem.GetDifficulty() + difficultyScaleFactor);
+                    difficultyChanged = true;
+                }
+                sceneTransitioner.GetComponent<SceneTransitions>().Blackout(SceneManager.GetActiveScene().name);
             }
         }
         //Adjust Score
@@ -88,6 +106,10 @@ public class ScoreManager : MonoBehaviour
                         i--;
                         collectableMinimumDistanceApart *= .9f;
                     }
+                }
+                if (endless)
+                {
+                    rover.GetComponent<SpawnManager>().enemyTimer /= saveSystem.GetDifficulty() + 1;
                 }
                 break;
             case MissionType.attack:
@@ -154,10 +176,10 @@ public class ScoreManager : MonoBehaviour
     {
         display = score.ToString("00");
         displayText.alignment = TextAnchor.MiddleCenter;
-        if (!endless)
-        {
+        //if (!endless)
+        //{
             display += "/" + MissionTarget.ToString("00");
-        }
+        //}
 
         return display;
 
