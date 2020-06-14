@@ -37,6 +37,7 @@ public class ScoreManager : MonoBehaviour
     public GameObject sceneTransitioner;
     public SaveSystem saveSystem;
     bool difficultyChanged;
+    public int startAliens;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +45,11 @@ public class ScoreManager : MonoBehaviour
         sceneTransitioner = GameObject.Find("SceneTransitionHolder");
         saveSystem = GetComponent<SaveSystem>();
         ScoreSet(MissionTarget);
+        for (int i = 0; i < startAliens; i++)
+        {
+
+            rover.GetComponent<SpawnManager>().SpawnAlien();
+        }
         pauseMenu = GameObject.Find("Canvas").GetComponent<PauseMenu>();
     }
 

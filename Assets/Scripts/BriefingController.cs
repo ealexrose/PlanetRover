@@ -20,7 +20,6 @@ public class BriefingController : MonoBehaviour
     void Start()
     {
         sceneTransitioner = GameObject.Find("SceneTransitionHolder");
-
         //Gotta have the SaveSystem script together with PauseMenu!
         saveSystem = GetComponent<SaveSystem>();
         //Loads the amount of levels passed
@@ -32,13 +31,27 @@ public class BriefingController : MonoBehaviour
         endlessDisable.SetActive(false);
         foreach (Transform child in transform)
         {
-            missionList.Add(child.gameObject);
+            
             if (child.GetComponent<LevelSelector>())
             {
+                missionList.Add(child.gameObject);
                 child.GetComponent<LevelSelector>().missionGuide.missionID = missionList.Count;
                 if (child.GetComponent<LevelSelector>().missionGuide.missionID > LevelsPassed)
                 {
-                child.GetComponent<LevelSelector>().missionGuide.isBeaten =  false;
+                    child.GetComponent<LevelSelector>().missionGuide.isBeaten = false;
+                }
+                else
+                {
+                    child.GetComponent<LevelSelector>().missionGuide.isBeaten = true;
+                }
+                if (child.GetComponent<LevelSelector>().missionGuide.missionID - 1 > LevelsPassed)
+                {
+                    child.GetComponent<Button>().interactable = false;
+
+                }
+                else
+                {
+                    child.GetComponent<Button>().interactable = true;
                 }
             }
         }
@@ -73,11 +86,18 @@ public class BriefingController : MonoBehaviour
     {
         if (endless.isOn)
         {
-            sceneTransitioner.GetComponent<SceneTransitions>().Blackout(cachedMission.endlessMission);
+            if (cachedMission.endlessMission != "")
+            {
+                sceneTransitioner.GetComponent<SceneTransitions>().Blackout(cachedMission.endlessMission);
+            }
+
         }
         else
         {
-            sceneTransitioner.GetComponent<SceneTransitions>().Blackout(cachedMission.mission);
+            if (cachedMission.mission != "")
+            {
+                sceneTransitioner.GetComponent<SceneTransitions>().Blackout(cachedMission.mission);
+            }
         }
         
 

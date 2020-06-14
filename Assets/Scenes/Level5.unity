@@ -450,6 +450,7 @@ MonoBehaviour:
   difficultyScaleFactor: 0
   sceneTransitioner: {fileID: 0}
   saveSystem: {fileID: 0}
+  startAliens: 15
 --- !u!114 &284734707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2911,6 +2912,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5941934694687454129, guid: d0c3d8638c449b74790fc47f6d405b4f,
+        type: 3}
+      propertyPath: displayAdOnSceneChange
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5941934694687454135, guid: d0c3d8638c449b74790fc47f6d405b4f,
         type: 3}
       propertyPath: m_Name
@@ -2959,7 +2965,7 @@ PrefabInstance:
     - target: {fileID: 8546816672997129518, guid: 88f2518636bcafa4b8833c430cd29bf7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -28.09
+      value: -14.2
       objectReference: {fileID: 0}
     - target: {fileID: 8546816672997129518, guid: 88f2518636bcafa4b8833c430cd29bf7,
         type: 3}
@@ -3062,6 +3068,8 @@ MonoBehaviour:
   currentBattery: 0
   batteryPickupValue: 10
   enemyHitValue: 30
+  hitSlowdownDuration: 1
+  hitSlowdownMultiplier: 0.25
   alive: 0
   batteryPickupSfx: pickup
   hitSfx: hit
@@ -3121,7 +3129,7 @@ MonoBehaviour:
     m_Bits: 512
   minimumObjectSpace: 3.3
   minimumRoverSpace: 10
-  enemyTimer: 1.5
+  enemyTimer: 9
   batteryTimer: 999
   planetRadius: 0
 --- !u!114 &8296172668857021622

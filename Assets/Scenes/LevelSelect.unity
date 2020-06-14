@@ -304,8 +304,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -375}
-  m_SizeDelta: {x: 511, y: 150}
+  m_AnchoredPosition: {x: 0, y: -447}
+  m_SizeDelta: {x: 561, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &113127981
 MonoBehaviour:
@@ -822,8 +822,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 273.00006}
-  m_SizeDelta: {x: 511, y: 150}
+  m_AnchoredPosition: {x: 0, y: 290}
+  m_SizeDelta: {x: 561, y: 165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &489931391
 MonoBehaviour:
@@ -841,7 +841,7 @@ MonoBehaviour:
     mission: Level2
     endlessMission: EndlessLevel2
     missionID: 1
-    isBeaten: 1
+    isBeaten: 0
     missionBriefing: 'Destination: Earth
 
 
@@ -1065,8 +1065,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 145.00005}
-  m_SizeDelta: {x: 511, y: 150}
+  m_AnchoredPosition: {x: 0, y: 150}
+  m_SizeDelta: {x: 561, y: 165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &763753658
 MonoBehaviour:
@@ -1285,8 +1285,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 20.000046}
-  m_SizeDelta: {x: 511, y: 150}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 561, y: 165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &852686342
 MonoBehaviour:
@@ -1606,8 +1606,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -102}
-  m_SizeDelta: {x: 511, y: 150}
+  m_AnchoredPosition: {x: 0, y: -150}
+  m_SizeDelta: {x: 561, y: 165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1066941903
 MonoBehaviour:
@@ -1625,7 +1625,7 @@ MonoBehaviour:
     mission: Level5
     endlessMission: EndlessLevel5
     missionID: 0
-    isBeaten: 1
+    isBeaten: 0
     missionBriefing: 'Destination: Earth
 
 
@@ -1868,8 +1868,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 401}
-  m_SizeDelta: {x: 511, y: 150}
+  m_AnchoredPosition: {x: 0, y: 430}
+  m_SizeDelta: {x: 561, y: 165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1162524952
 MonoBehaviour:
@@ -1978,7 +1978,7 @@ MonoBehaviour:
     mission: Level1
     endlessMission: EndlessLevel1
     missionID: 0
-    isBeaten: 1
+    isBeaten: 0
     missionBriefing: 'Destination: Earth
 
 
@@ -2230,7 +2230,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 5, y: 143}
-  m_SizeDelta: {x: 560, y: 1015}
+  m_SizeDelta: {x: 616, y: 1116}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1282355263
 MonoBehaviour:
@@ -2344,8 +2344,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -223}
-  m_SizeDelta: {x: 511, y: 150}
+  m_AnchoredPosition: {x: 0, y: -300}
+  m_SizeDelta: {x: 561, y: 165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1323980283
 MonoBehaviour:
@@ -2363,7 +2363,7 @@ MonoBehaviour:
     mission: Level6
     endlessMission: EndlessLevel6
     missionID: 0
-    isBeaten: 1
+    isBeaten: 0
     missionBriefing: 'Destination: Earth
 
 
@@ -2653,6 +2653,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5941934694687454129, guid: d0c3d8638c449b74790fc47f6d405b4f,
+        type: 3}
+      propertyPath: displayAdOnSceneChange
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5941934694687454135, guid: d0c3d8638c449b74790fc47f6d405b4f,
         type: 3}
       propertyPath: m_Name
@@ -2695,8 +2700,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: -1005}
-  m_SizeDelta: {x: 695, y: 1015}
+  m_AnchoredPosition: {x: 6, y: -1111}
+  m_SizeDelta: {x: 695, y: 1115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1597077747
 MonoBehaviour:
@@ -2889,7 +2894,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -477, y: -1423}
+  m_AnchoredPosition: {x: -477, y: -1529}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1904959606

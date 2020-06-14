@@ -27,7 +27,7 @@ public class SpawnManager : MonoBehaviour
 
     public float planetRadius;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         homePlanet = GameObject.Find("planet");
         planetRadius = this.GetComponent<RoverController>().radius;
@@ -41,7 +41,8 @@ public class SpawnManager : MonoBehaviour
         enemyTimerIndex += Time.deltaTime;
         if (enemyTimerIndex >= enemyTimer)
         {
-            SpawnItem(enemy, planetRadius, minimumObjectSpace, minimumRoverSpace);
+            //SpawnItem(enemy, planetRadius, minimumObjectSpace, minimumRoverSpace);
+            SpawnAlien();
             enemyTimerIndex = 0;
         }
         if (batteryTimerIndex >= batteryTimer)
@@ -50,6 +51,13 @@ public class SpawnManager : MonoBehaviour
             batteryTimerIndex = 0;   
         }
     }
+
+    public void SpawnAlien()
+    {
+        Debug.Log("did it");
+        SpawnItem(enemy, planetRadius, minimumObjectSpace, minimumRoverSpace);
+    }
+
 
     public bool SpawnItem(GameObject _objectToSpawn, float _planetRadius, float _objectSpace, float _roverSpace)
     {

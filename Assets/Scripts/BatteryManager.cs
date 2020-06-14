@@ -16,6 +16,8 @@ public class BatteryManager : MonoBehaviour
     public float currentBattery;
     public float batteryPickupValue;
     public float enemyHitValue;
+    public float hitSlowdownDuration;
+    public float hitSlowdownMultiplier;
     [HideInInspector]
     public bool alive;
     [Space]
@@ -82,6 +84,7 @@ public class BatteryManager : MonoBehaviour
                 case "enemy":
                     currentBattery -= enemyHitValue;
                     audioManager.Play(hitSfx);
+                    StartCoroutine(HitStun());
                     break;
                 case "collectable":
                     Destroy(collidedObject);
@@ -95,5 +98,15 @@ public class BatteryManager : MonoBehaviour
             }
             currentBattery = Mathf.Clamp(currentBattery, 0, maxBattery);
         }
+    }
+
+    IEnumerator HitStun()
+    {
+        //Play Animation
+        roverController.moveSpeed = roverController.moveSpeed * hitSlowdownMultiplier;
+        //Wait
+        yield return new WaitForSeconds(hitSlowdownDuration);
+        //Load Scene
+        roverController.moveSpeed = roverController.moveSpeed / hitSlowdownMultiplier;
     }
 }

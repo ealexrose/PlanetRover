@@ -398,7 +398,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6bb257aca29928f49840da99f1f2de66, type: 3}
-    m_FontSize: 120
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 0
@@ -449,6 +449,7 @@ MonoBehaviour:
   difficultyScaleFactor: 0
   sceneTransitioner: {fileID: 0}
   saveSystem: {fileID: 0}
+  startAliens: 0
 --- !u!1 &319962161 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: f46e25633591b9148b3d0c6033e06608,
@@ -566,6 +567,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941934694687454129, guid: d0c3d8638c449b74790fc47f6d405b4f,
+        type: 3}
+      propertyPath: displayAdOnSceneChange
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5941934694687454135, guid: d0c3d8638c449b74790fc47f6d405b4f,
         type: 3}
@@ -2945,7 +2951,7 @@ PrefabInstance:
     - target: {fileID: 8546816672997129518, guid: 88f2518636bcafa4b8833c430cd29bf7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -28.09
+      value: -15.45
       objectReference: {fileID: 0}
     - target: {fileID: 8546816672997129518, guid: 88f2518636bcafa4b8833c430cd29bf7,
         type: 3}
@@ -3043,11 +3049,13 @@ MonoBehaviour:
   objectMask:
     serializedVersion: 2
     m_Bits: 256
-  maxBattery: 50
+  maxBattery: 40
   drainSpeed: 1
   currentBattery: 0
   batteryPickupValue: 10
   enemyHitValue: 30
+  hitSlowdownDuration: 0
+  hitSlowdownMultiplier: 0
   alive: 0
   batteryPickupSfx: pickup
   hitSfx: hit
@@ -3108,7 +3116,7 @@ MonoBehaviour:
   minimumObjectSpace: 3.3
   minimumRoverSpace: 10
   enemyTimer: 999
-  batteryTimer: 3
+  batteryTimer: 6
   planetRadius: 0
 --- !u!114 &8296172668857021622
 MonoBehaviour:
