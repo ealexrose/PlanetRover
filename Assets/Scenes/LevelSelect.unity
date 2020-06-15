@@ -845,8 +845,10 @@ MonoBehaviour:
     missionBriefing: 'Destination: Earth
 
 
-      Another short training mission to
-      get used to the input delays that will occur when visiting other planets. '
+      Great Job! Here''s Another short
+      training mission to get used to the input delays that will occur when visiting
+      other planets. After this get ready to go beyond! You can also revist any other
+      missions you beat in an endless mode. Woo!'
   briefingController: {fileID: 0}
   button: {fileID: 0}
 --- !u!114 &489931392
@@ -1088,9 +1090,10 @@ MonoBehaviour:
     missionBriefing: 'Destination: Mars
 
 
-      Explore the planet of Mars, but watch
-      out for the aliens! They''ll drain the rover''s battery if it come in contact
-      with them.'
+      Oh wow first contact! Unfortunately
+      scanning the aliens will quickly drain your battery. Try and stick around long
+      enough for us to use remote scanners. Maybe we can figure out where they live
+      if we ask nicely.'
   briefingController: {fileID: 0}
   button: {fileID: 0}
 --- !u!114 &763753659
@@ -1308,9 +1311,10 @@ MonoBehaviour:
     missionBriefing: 'Destination: Alien Home World
 
 
-      Collect the artifacts
-      that populate the planet, but make sure to steer clear of the aliens as they
-      don''t take kindly to strangers. '
+      Turns out we were neighbours
+      all along! There''s many aliens here but it''s hard to understand them since
+      all they do is jump. Collecting those orb-artifacts(known in the biz as orbifacts)
+      might help us decipher their language'
   briefingController: {fileID: 0}
   button: {fileID: 0}
 --- !u!114 &852686343
@@ -1982,9 +1986,10 @@ MonoBehaviour:
     missionBriefing: 'Destination: Earth
 
 
-      A short training mission to get
-      used to the rover controls. Tap the left side of the screen to turn to the
-      rovers left, and the right side of the screen to turn right.'
+      Greetings Intern! Today you will
+      be going on a short training mission to get used to the rover controls. Tap
+      the left side of the screen to turn to the rovers left, and the right side
+      of the screen to turn right.'
   briefingController: {fileID: 0}
   button: {fileID: 0}
 --- !u!224 &1226636462 stripped
@@ -2168,7 +2173,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 6bb257aca29928f49840da99f1f2de66, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 100
     m_Alignment: 0
@@ -2177,7 +2182,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Destination: Planet'
+  m_Text: '* * *'
 --- !u!222 &1276881011
 CanvasRenderer:
   m_ObjectHideFlags: 0
